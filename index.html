@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import Question</title>
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+<div class="flowers">
+    <span>🌸</span>
+    <span>🌺</span>
+    <span>🌼</span>
+    <span>🌷</span>
+    <span>🌹</span>
+    <span>🌸</span>
+    <span>🌺</span>
+    <span>🌼</span>
+</div>
+
+    <div class="container">
+<div class="flowers-front">
+    <span>🌸</span>
+    <span>🌺</span>
+    <span>🌼</span>
+    <span>🌷</span>
+    <span>🌹</span>
+    <span>🌸</span>
+</div>
+
+    <div class="banner-gif">
+    <img id="bannerImage" src="./public/images/last.jpeg" alt="banner">
+</div>
+
+      <h1 id="question-heading">Will you be my valentine?</h1>
+      <div class="buttons">
+        <button id="yes-button"><p>Yes</p></button>
+        <button id="no-button"><p>No</p></button>
+      </div>
+    <div class="message" id="step-1">
+  <h2>Yaaay! 🥰</h2>
+  <p>Choose our Valentine plan:</p>
+
+  <div class="scenarios">
+    <button class="scenario-btn" onclick="chooseMain('dinner')">
+      🌹 Kain lang sa fastfood
+    </button>
+
+    <button class="scenario-btn" onclick="chooseMain('movie')">
+      🎬 Manunood
+    </button>
+
+    <button class="scenario-btn" onclick="chooseMain('travel')">
+      ✈️ Papasyal ??😆
+    </button>
+  </div>
+</div>
+
+<div class="message" id="step-2"></div>
+
+<div class="message" id="final-message">
+  <h2 id="success-message">Yepppie, see you sooonnn my love iloveyou😘😘 💕</h2>
+  <h4 id="scenario-result"></h4>
+
+  <h6>
+    Creator:
+    <a class="creator" href="https://github.com/Aayush-683">ShisuI ;)</a>
+  </h6>
+</div>
+    
+    <script src="./public/js/script.js"></script>
+  </body>
+</html>
