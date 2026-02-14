@@ -1,0 +1,360 @@
+/* ===== Global Reset ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body Design ===== */
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Soft gradient background */
+    background: linear-gradient(135deg, #f8f9ff, #ffeef5);
+    overflow-x: hidden;
+}
+
+/* ===== Floating Glass Container ===== */
+.container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===== Buttons Section ===== */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ===== Shared Button Style ===== */
+#yes-button,
+#no-button {
+    height: 45px;
+    padding: 0 25px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* YES Button */
+#yes-button {
+    background: linear-gradient(45deg, #00c853, #00e676);
+}
+
+#yes-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 200, 83, 0.4);
+}
+
+/* NO Button */
+#no-button {
+    background: linear-gradient(45deg, #ff1744, #ff5252);
+}
+
+#no-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 23, 68, 0.4);
+}
+
+/* Click animation */
+#yes-button:active,
+#no-button:active {
+    transform: scale(0.95);
+}
+
+/* ===== Message Fade In ===== */
+.message {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== GIF Section ===== */
+.banner-gif {
+    margin-top: 25px;
+}
+
+.banner-gif img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.banner-gif img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Language Selector ===== */
+.language-selector {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.language-selector select:hover {
+    border-color: #888;
+}
+
+/* ===== Creator Link ===== */
+.creator {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.creator:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    #yes-button,
+    #no-button {
+        width: 100%;
+    }
+
+    .banner-gif img {
+        width: 200px;
+    }
+}
+/* ===== Floating Flowers Background ===== */
+
+.flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.flowers span {
+    position: absolute;
+    font-size: 30px;
+    animation: floatFlowers linear infinite;
+    opacity: 0.7;
+}
+
+/* Random positions + delays */
+.flowers span:nth-child(1) {
+    left: 10%;
+    animation-duration: 18s;
+    animation-delay: 0s;
+}
+.flowers span:nth-child(2) {
+    left: 25%;
+    animation-duration: 22s;
+    animation-delay: 5s;
+}
+.flowers span:nth-child(3) {
+    left: 40%;
+    animation-duration: 20s;
+    animation-delay: 2s;
+}
+.flowers span:nth-child(4) {
+    left: 55%;
+    animation-duration: 25s;
+    animation-delay: 7s;
+}
+.flowers span:nth-child(5) {
+    left: 70%;
+    animation-duration: 19s;
+    animation-delay: 4s;
+}
+.flowers span:nth-child(6) {
+    left: 85%;
+    animation-duration: 23s;
+    animation-delay: 1s;
+}
+.flowers span:nth-child(7) {
+    left: 60%;
+    animation-duration: 26s;
+    animation-delay: 3s;
+}
+.flowers span:nth-child(8) {
+    left: 30%;
+    animation-duration: 21s;
+    animation-delay: 6s;
+}
+
+/* Floating Animation */
+@keyframes floatFlowers {
+    0% {
+        bottom: -50px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(30px) rotate(180deg);
+    }
+    100% {
+        bottom: 110%;
+        transform: translateX(-30px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* ===== Foreground Floating Flowers ===== */
+
+.flowers-front {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So buttons still clickable */
+    overflow: hidden;
+    z-index: 10; /* Above container */
+}
+
+.flowers-front span {
+    position: absolute;
+    font-size: 35px;
+    animation: floatFront linear infinite;
+    opacity: 0.9;
+}
+
+/* Different random placements */
+.flowers-front span:nth-child(1) {
+    left: 15%;
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+.flowers-front span:nth-child(2) {
+    left: 35%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+.flowers-front span:nth-child(3) {
+    left: 55%;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+.flowers-front span:nth-child(4) {
+    left: 75%;
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
+.flowers-front span:nth-child(5) {
+    left: 85%;
+    animation-duration: 17s;
+    animation-delay: 2s;
+}
+.flowers-front span:nth-child(6) {
+    left: 45%;
+    animation-duration: 19s;
+    animation-delay: 4s;
+}
+
+/* Animation for foreground */
+@keyframes floatFront {
+    0% {
+        bottom: -60px;
+        transform: translateX(0) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(40px) rotate(180deg) scale(1);
+    }
+    100% {
+        bottom: 110%;
+        transform: translateX(-40px) rotate(360deg) scale(0.9);
+        opacity: 0;
+    }
+}
+
+.scenarios {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.scenario-btn {
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.scenario-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(255, 105, 180, 0.4);
+}
+body {
+    transition: background 0.8s ease;
+}
